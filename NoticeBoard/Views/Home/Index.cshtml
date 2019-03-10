@@ -1,0 +1,25 @@
+﻿@model  IEnumerable<NoticeBoard.Models.Note>
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <div class="d-flex flex-wrap">
+        @foreach (var note in Model)
+        {
+            <div class="card m-3" style="width: 18rem;">
+                <div class="card-header">
+                    Posted at @note.Date.ToString("MM/dd/yyyy H:mm")
+                </div>
+                <div class="card-body bg-light">
+
+                    <h2 class="card-title">@note.Title</h2>
+
+                    <p class="class=" blockquote mb-0"">@note.Content</p>
+                    <!-- <footer class="blockquote-footer">note.Author in <cite title="Source Title">note.Location</cite></footer> -->
+                </div>
+            </div>
+        }
+
+    </div>
+
+    </div>
